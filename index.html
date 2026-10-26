@@ -6,7 +6,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%230F1B3D%22/%3E%3Ctext x=%2232%22 y=%2242%22 font-family=%22Arial%22 font-weight=%22800%22 font-size=%2228%22 text-anchor=%22middle%22 fill=%22%23F3F6FF%22%3EAS%3C/text%3E%3C/svg%3E">
 <meta property="og:title" content="Ahmed Saad, Business &amp; Digital Solutions Partner">
 <meta property="og:description" content="13+ years in diagnostics: field service, CRM and ERP programs, BI and digital adoption. Consulting through KlarVis, Copenhagen.">
-<meta property="og:image" content="https://klarvis.dk/assets/klarvis-poster.jpg">
+<meta property="og:image" content="https://klarvis.dk/klarvis-poster.jpg">
 <title>Ahmed Saad</title>
 <meta name="description" content="Ahmed Saad, Business & Digital Solutions Partner in Copenhagen. 13+ years in diagnostics: field service, CRM and ERP programs, BI and digital adoption. Consulting and collaboration through KlarVis.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -362,8 +362,8 @@ footer a { color: var(--hero-ink); }
       <p class="note">Independent project, not affiliated with Trading 212. Not financial advice.</p>
     </div>
     <div class="media">
-      <video id="kv" controls playsinline preload="metadata" poster="assets/klarvis-poster.jpg" aria-label="KlarVis 33-second product video">
-        <source src="assets/klarvis-ad.mp4" type="video/mp4">
+      <video id="kv" controls playsinline preload="metadata" poster="klarvis-poster.jpg" aria-label="KlarVis 33-second product video">
+        <source src="klarvis-ad.mp4" type="video/mp4">
       </video>
     </div>
   </article>
@@ -406,7 +406,10 @@ footer a { color: var(--hero-ink); }
         <label for="f-name">Your name<input id="f-name" name="name" type="text" autocomplete="name" required></label>
         <label for="f-email">Email<input id="f-email" name="email" type="email" autocomplete="email" required></label>
       </div>
-      <label for="f-company">Company <span class="opt">(optional)</span><input id="f-company" name="company" type="text" autocomplete="organization"></label>
+      <div class="row2">
+        <label for="f-company">Company <span class="opt">(optional)</span><input id="f-company" name="company" type="text" autocomplete="organization"></label>
+        <label for="f-phone">Phone <span class="opt">(optional)</span><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+45 12 34 56 78" pattern="[0-9+()\s\-]{6,20}" title="Digits, spaces, + ( ) or - only"></label>
+      </div>
       <fieldset style="border:0;padding:0;margin:0;display:grid;gap:8px"><legend style="font-size:.88rem;font-weight:600;padding:0;margin-bottom:6px">What is it about?</legend>
         <div class="topics">
           <label><input type="radio" name="topic" value="Consultation" checked><span>Consultation</span></label>
@@ -459,7 +462,7 @@ footer a { color: var(--hero-ink); }
   }));
   // vertical video on phones
   const v = $("kv");
-  if (v && matchMedia("(max-width: 700px)").matches) { v.poster = "assets/klarvis-poster-vertical.jpg"; v.querySelector("source").src = "assets/klarvis-ad-vertical.mp4"; v.load(); }
+  if (v && matchMedia("(max-width: 700px)").matches) { v.poster = "klarvis-poster-vertical.jpg"; v.querySelector("source").src = "klarvis-ad-vertical.mp4"; v.load(); }
   // copy email
   $("copy").addEventListener("click", async () => {
     const t = $("mail").textContent;
