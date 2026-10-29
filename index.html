@@ -522,8 +522,8 @@ footer a { color: var(--hero-ink); }
   // contact form via Web3Forms (sends the message to Ahmed's inbox)
   const form = $("cform"), st = $("status"), send = $("send");
   const show = (cls, msg) => { st.className = "status " + cls; st.textContent = msg; st.hidden = false; };
-  form.addEventListener("submit", async ev => {
-    ev.preventDefault();
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
     if (!form.checkValidity()) { show("err", "Please fill in your name, a valid email and a message."); form.reportValidity && form.reportValidity(); return; }
     const key = form.access_key.value;
     if (!key || key.startsWith("YOUR_")) { show("err", "The form is not connected yet. Please email ahmedsaad411@gmail.com or message me on LinkedIn."); return; }
